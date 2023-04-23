@@ -1,0 +1,118 @@
+.gauge {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin-top: 50px;
+}
+
+.progress {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 1px solid var(--brown);
+    border-bottom: 1px solid var(--gray);
+    border-radius: 50%;
+    outline: 5px solid var(--brown);
+    outline-offset: 7px;
+    overflow: hidden;
+}
+
+.needle {
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    background-color: var(--brown);
+    clip-path: polygon(50% 0, 50% 0, 52% 100%, 48% 100%);
+    transform: var(--rotate);
+    transform-origin: bottom center;
+    animation: rotate 2s ease-in-out;
+    z-index: 500;
+}
+
+.indication1 {
+    position: absolute;
+    top: 140px;
+    left: 20px;
+    width: 50px;
+    height: 10px;
+    border-radius: 10px;
+    background-color: var(--brown);
+    text-align: center
+}
+
+.indication2 {
+    position: absolute;
+    top: 70px;
+    left: 10px;
+    width: 50px;
+    height: 10px;
+    border-radius: 10px;
+    background-color: var(--brown);
+    text-align: center
+}
+
+.indication3 {
+    position: absolute;
+    top: 20px;
+    left: 75px;
+    width: 50px;
+    height: 10px;
+    border-radius: 10px;
+    background-color: var(--brown);
+    text-align: center
+}
+
+.indication4 {
+    position: absolute;
+    top: 70px;
+    right: 10px;
+    width: 50px;
+    height: 10px;
+    border-radius: 10px;
+    background-color: var(--brown);
+    text-align: center
+}
+
+.indication5 {
+    position: absolute;
+    top: 140px;
+    right: 20px;
+    width: 50px;
+    height: 10px;
+    border-radius: 10px;
+    background-color: var(--brown);
+    text-align: center
+}
+
+.city {
+    position: absolute;
+    top: 50px;
+    left: 75px;
+    width: 50px;
+    height: 10px;
+    border-radius: 10px;
+    font-size: 15px;
+    text-align: center;
+}
+
+.data {
+    border-radius: 10px;
+    position: absolute;
+    top: 80%;
+    left: 70px;
+    width: 30%;
+    height: 30px;
+    background-color: rgb(214, 204, 194);
+    text-align: center;
+}
+
+.dataItem {
+    margin: 0;
+    padding-top: 4px;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(-135deg);
+    }
+}

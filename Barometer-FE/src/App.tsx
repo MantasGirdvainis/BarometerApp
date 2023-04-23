@@ -1,15 +1,9 @@
-import { useQuery } from "react-query";
-import { getWeather } from "./api/weather/getWeather";
-import { WeatherCard } from "./components/weatherCard/weatherCard";
+import { GaugeContainer } from "./containers/gaugeContainer";
 
 function App() {
 
-  const { data } = useQuery('observations', () => getWeather('nidos'));
-  
-  console.log(data?.observations.slice(-1))
-  
   return (
-      <WeatherCard />
+   <GaugeContainer />
   )
 }
 

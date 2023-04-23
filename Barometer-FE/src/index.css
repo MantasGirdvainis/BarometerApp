@@ -1,11 +1,16 @@
 body {
-  background-color: rgb(230, 230, 230);
+  background-color: var(--gray);
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  margin: 0;
+  font-size: 8px;
+  padding: 0;
+  color: white;
+  font-weight: 900;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
 :root {
-  --white: rgb(255, 255, 255);
-  --red: rgb(255, 0, 0);
+  --gray: rgb(237, 237, 233);
+  --brown: rgb(213, 189, 175);
+  --rotate: rotate(135deg);
 }

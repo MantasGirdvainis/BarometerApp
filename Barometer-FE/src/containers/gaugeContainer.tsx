@@ -7,23 +7,29 @@ import styles from "./gaugeContainer.module.css";
 import { Button } from "../components/button/button";
 
 export const GaugeContainer = (): JSX.Element => {
-  const [showVilnius, setShowVilnius] = useState(true);
-  const [showNida, setShowNida] = useState(true);
+  const [showVilnius, setShowVilnius] = useState(false);
+  const [showNida, setShowNida] = useState(false);
 
-  const { data: nida } = useQuery("pressureNida", () => getWeather("nidos"));
-  const { data: vilnius } = useQuery("pressureVilnius", () =>
-    getWeather("vilniaus")
+  const { data: nida, refetch: refetchNida } = useQuery("pressureNida", () => getWeather("nidos"), {
+    enabled: false
+  });
+  const { data: vilnius, refetch: refetchVilnius } = useQuery("pressureVilnius", () =>
+    getWeather("vilniaus"), {
+      enabled: false
+    }
   );
 
   const pressureNida = nida?.observations.slice(-1)[0].seaLevelPressure;
   const pressureVilnius = vilnius?.observations.slice(-1)[0].seaLevelPressure;
 
-  const handleShowNida = () => {
+  const handleShowNida = async () => {
     setShowNida((prev) => !prev);
+    await refetchNida();
   };
 
-  const handleShowVilnius = () => {
+  const handleShowVilnius = async () => {
     setShowVilnius((prev) => !prev);
+    await refetchVilnius();
   };
 
   const pressureChangingStatus = (city: any) => {

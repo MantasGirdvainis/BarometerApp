@@ -1,0 +1,15 @@
+version: '3.8'
+services:
+  barometerbe:
+    build: ./barometer-be
+    container_name: barometer_be
+    ports:
+      - 3001:3001
+  barometerfe:
+    build: ./barometer-fe
+    container_name: barometer_fe
+    ports:
+      - 3000:3000
+    stdin_open: true
+    tty: true
+

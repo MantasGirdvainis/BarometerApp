@@ -4,3 +4,4 @@ const validate = (place) => {
     return /^[a-z]*$/.test(place);
 };
 exports.default = validate;
+//# sourceMappingURL=place.validator.js.map

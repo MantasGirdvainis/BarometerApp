@@ -27,3 +27,4 @@ const getWeather = (req, res, next) => __awaiter(void 0, void 0, void 0, functio
     }
 });
 exports.getWeather = getWeather;
+//# sourceMappingURL=weather.controller.js.map

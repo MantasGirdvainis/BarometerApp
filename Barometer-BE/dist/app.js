@@ -11,3 +11,4 @@ app.use('/weather', weather_routes_1.default);
 app.listen(port, function () {
     console.log(`App is listening on port ${port} !`);
 });
+//# sourceMappingURL=app.js.map

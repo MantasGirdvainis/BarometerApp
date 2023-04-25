@@ -8,3 +8,4 @@ const weather_controller_1 = require("../controllers/weather.controller");
 const router = express_1.default.Router();
 router.get('/', weather_controller_1.getWeather);
 exports.default = router;
+//# sourceMappingURL=weather.routes.js.map

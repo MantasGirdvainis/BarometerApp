@@ -19,3 +19,4 @@ const getWeatherinfo = (place) => __awaiter(void 0, void 0, void 0, function* ()
     return data;
 });
 exports.getWeatherinfo = getWeatherinfo;
+//# sourceMappingURL=weather.service.js.map

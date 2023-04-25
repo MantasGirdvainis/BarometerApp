@@ -4,7 +4,7 @@ This project contains source code and supporting files for Barometer application
 
 ## Project startup
 
-Before starting project, you need to install all the dependencies form each Front End and Back End. To do so run `npm install` command for each and start project use `npm run dev` for Back End and Front End.
+Before starting project, you need to install all the dependencies for each Front End and Back End. To do so run `npm install` command for each part and start project use `npm run dev` for Back End and Front End.
 
 ## Testing
 

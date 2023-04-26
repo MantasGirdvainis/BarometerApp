@@ -1,6 +1,6 @@
 import validate from "../validators/place.validator";
 
-describe('Title Validator', () => {
+describe('Place validator', () => {
     it('should be valid', () => {
       const result = validate('abc');
   
